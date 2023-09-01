@@ -6,11 +6,20 @@
     //Apresente apenas os números pares. Apresente também a quantidade de números pares que existem e apresente a quantidade de elementos da lista original.
 
     //ENTRADA
-
+    let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
 
     //PROCESSAMENTO
-
-
+    let numPares = [];
+    let quantiNumsPares = [];
+    for (let item of listaDeItens) {
+        if (typeof item === "number" && item % 2 === 0) {
+            numPares.push(item);
+            quantiNumsPares++;
+        }
+    }
+    let quantiTotalElemt = listaDeItens.length;
     //SAÍDA
-
+    document.write(`Números pares: ${numPares} / `);
+    document.write(`Quantidade de números pares: ${quantiNumsPares} / `);
+    document.write(`Quantidade toteal de elementos da lista: ${quantiTotalElemt}.`);
 </script>
